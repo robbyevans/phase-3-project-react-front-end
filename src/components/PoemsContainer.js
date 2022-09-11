@@ -9,8 +9,9 @@ function PoemsContainer({poemList,onDelete}) {
     return<Poem
      key={poem.id}
     title={poem.title} 
-    content={poem.content}
+    content={poem.lyrics}
     author={poem.author} 
+    genre={poem.genre}
     poem={poem}
     onDelete={onDelete}
     />

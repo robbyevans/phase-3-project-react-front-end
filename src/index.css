@@ -1,9 +1,16 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #1a1d1e;
+  background-color:var(--color-primary);
   color: #fff;
 }
+:root{
+  --color-body:#fff;
+  --color-primary: #f0f2f5;
+  --color-secondary:#1a2429;
+  --color-accent:#00b373;
+  --color-footer:#2c3333;
+} 
 
 .app {
   display: flex;
@@ -13,11 +20,12 @@ body {
 .sidebar {
   min-height: 100vh;
   min-width: 12em;
-  width: 28%;
-  border-right: solid black 1px;
-  background: #1a1d1e;
+  width: 20%;
+  /* border-right: solid black 1px; */
+  background: var(--color-secondary);
   padding: 1em;
   margin-right: 20px;
+  /* border-radius: 10px; */
 }
 
 .sidebar > button {
@@ -27,7 +35,9 @@ body {
 .poems-container {
   max-width: 30em;
   margin: auto;
-  background-color: #1a1d1e;
+  background-color:var(--color-body);
+  color: black;
+  border-radius: 10px;
 
 }
 
@@ -42,7 +52,7 @@ body {
 }
 
 form.new-poem-form {
-  border: solid black 1px;
+  /* border: solid black 1px; */
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -54,12 +64,15 @@ form.new-poem-form > textarea {
   font-family: sans-serif;
   margin-bottom: 0.5em;
 }
+form.new-poem-form >select{
+  margin-bottom: 10px;
+}
 
 input[type="submit"],
 button {
   font-weight: bold;
   font-size: 1em;
-  background: #04e8ff;
+  background: var(--color-accent);
   border: solid black 1px;
   padding: 0.5em;
   cursor: pointer;
@@ -68,20 +81,69 @@ button {
 .header{
   display: block;
   text-align: center;
-  background: rgb(251,229,0);
-background: linear-gradient(90deg, rgba(251,229,0,1) 55%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%);
+  background:var(--color-secondary);
   margin: 5px;
   padding: 5px;
-  margin-bottom: 50px;
-  border-bottom: 2px solid black;
+  margin-bottom: 30px;
+  /* border-bottom: 2px solid black; */
 
 }
+.title{
+  text-decoration: underline;
+}
 .btn{
-  background-color: #fbe500;
-  margin-bottom:50px;
+  background-color: var(--color-accent);
+  margin-bottom:10px;
   border: none;
   border-radius: 5px;
 }
 .new-poem-form{
-  background-color:#fbe500 ;
+  background-color:var(--color-body);
+  border-radius: 10px;
+}
+.footer{
+  position: absolute;
+  text-align: center;
+  /* background-color:var(--color-accent); */
+  /* position: fixed; */
+  bottom: -100px;
+  width: 100%;
+  height: 1.0rem;   /* Height of the footer */
+  /* margin-bottom: 0px;
+  padding-top: 100px; */
+}
+.footer-container{
+  width: 100vw;
+  /* height: 70vh; */
+}
+.footer-container > ul{
+  list-style: none;
+}
+.row-container{
+  display: flex;
+  flex-direction: row;
+  background-color:var(--color-secondary);
+  justify-content: space-evenly;
+}
+.wrapper{
+  position: relative;
+  min-height: 100vh;
+}
+.copyright{
+  color: black;
+  padding-bottom: 10px;
+  font-weight: 600;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.like-btn{
+  background-color: var(--color-body);
+  padding-top: 2px;
+ 
+}
+.delete-btn{
+  margin-right: 0px;
+  padding-bottom: 3px;
+  margin-left: 160px;
+  background-color: var(--color-body);
 }

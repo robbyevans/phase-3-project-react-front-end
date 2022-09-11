@@ -2,6 +2,7 @@ import React,{useEffect,useState} from "react";
 import PoemsContainer from "./PoemsContainer";
 import NewPoemForm from "./NewPoemForm";
 import Header from "./Header";
+import Footer from "./Footer"
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
   const[isTrue,setIsTrue]=useState(true)
 
   useEffect(()=>{
-    fetch("http://localhost:8004/poems")
+    fetch("http://localhost:9292/")
     .then((resp)=>(resp.json()))
     .then((poem)=>setPoemList(poem))
   },[])
@@ -34,19 +35,13 @@ function App() {
 
   return (
     <div class="wrapper">
-        <Header>
-
-
-        </Header>
-        <button className="btn" onClick={handleClick}> create list</button>
+        <Header/>
+        <button className="btn" onClick={handleClick}> Add Lyrics +</button>
       <div className="app">
-
-        
           {isTrue ? <div className="sidebar"><NewPoemForm onAdd={addNewPoem} /></div> : null}
-        
-
         <PoemsContainer poemList={poemList} onDelete={onDelete} />
       </div>
+      <Footer/>
     </div>
   );
 }
