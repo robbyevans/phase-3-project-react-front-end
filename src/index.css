@@ -21,11 +21,9 @@ body {
   min-height: 100vh;
   min-width: 12em;
   width: 20%;
-  /* border-right: solid black 1px; */
   background: var(--color-secondary);
   padding: 1em;
   margin-right: 20px;
-  /* border-radius: 10px; */
 }
 
 .sidebar > button {
@@ -52,7 +50,6 @@ body {
 }
 
 form.new-poem-form {
-  /* border: solid black 1px; */
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -73,7 +70,6 @@ button {
   font-weight: bold;
   font-size: 1em;
   background: var(--color-accent);
-  border: solid black 1px;
   padding: 0.5em;
   cursor: pointer;
   margin-left: 10px;
@@ -85,7 +81,6 @@ button {
   margin: 5px;
   padding: 5px;
   margin-bottom: 30px;
-  /* border-bottom: 2px solid black; */
 
 }
 .title{
@@ -104,17 +99,12 @@ button {
 .footer{
   position: absolute;
   text-align: center;
-  /* background-color:var(--color-accent); */
-  /* position: fixed; */
   bottom: -100px;
   width: 100%;
-  height: 1.0rem;   /* Height of the footer */
-  /* margin-bottom: 0px;
-  padding-top: 100px; */
+  height: 1.0rem; 
 }
 .footer-container{
   width: 100vw;
-  /* height: 70vh; */
 }
 .footer-container > ul{
   list-style: none;
@@ -138,12 +128,16 @@ button {
 }
 .like-btn{
   background-color: var(--color-body);
-  padding-top: 2px;
- 
 }
 .delete-btn{
-  margin-right: 0px;
-  padding-bottom: 3px;
-  margin-left: 160px;
   background-color: var(--color-body);
+}
+.utilities{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.content-wrapper{
+  margin: 10px;
 }
