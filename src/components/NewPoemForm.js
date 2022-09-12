@@ -19,7 +19,7 @@ function NewPoemForm(props) {
  function handleSubmit(event){
   event.preventDefault();
   
-    fetch("http://localhost:9292/songs/", {
+    fetch("https://lyrical-web-app.herokuapp.com/songs/", {
       method:"POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,14 +47,14 @@ function NewPoemForm(props) {
       <input name="title" onChange={handleChange}  value={formData.title} placeholder="Song" />
       <input name="author" onChange={handleChange}   value={formData.author} placeholder="Artist" />
       <select  onChange={handleChange} value={formData.genre}>
-        <option name= "1" selected >Reggae</option>
+        <option name= "1" >Reggae</option>
         <option name= "2" >Hip-hop</option>
         <option name= "3" >R&B</option>
         <option name= "4" >Afrobeats</option>
         <option name= "5"  >Bongo</option>
       </select>
       <textarea name="lyrics" onChange={handleChange} value={formData.lyrics} placeholder="Lyrics.." rows={10} />
-      <input className="btn" type="submit" value="Post" />
+      <input className="btn input-btn" type="submit" value="Post" />
     </form>
   );
 }

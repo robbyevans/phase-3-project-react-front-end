@@ -7,15 +7,15 @@ function Footer() {
         <div className="footer-container">
           <h3>Contacts</h3>
           <ul>
-            <li><a href="">robbyevans001@gmail.com</a>
+            <li><a href="mail to:robbyevans001@gmail.com">E-mail me</a>
             </li>
           </ul>
         </div>
         <div className="footer-container">
           <h3>useful links</h3>
           <ul>
-            <li>Blog Post</li>
-            <li>Return Policy</li>
+            <li><a href="#">Blog Post</a></li>
+            <li><a href="#">Return Policy</a></li>
           </ul>
         </div>
         <div className="footer-container">

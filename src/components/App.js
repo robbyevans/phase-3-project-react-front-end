@@ -10,7 +10,7 @@ function App() {
   const[isTrue,setIsTrue]=useState(true)
 
   useEffect(()=>{
-    fetch("http://localhost:9292/")
+    fetch("https://lyrical-web-app.herokuapp.com/")
     .then((resp)=>(resp.json()))
     .then((poem)=>setPoemList(poem))
   },[])

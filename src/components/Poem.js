@@ -9,7 +9,7 @@ function handleClick(){
   setIsRead(!isRead)
 }
 function handleDelete(){
-  fetch(`http://localhost:9292/songs/${id}`,{
+  fetch(`https://lyrical-web-app.herokuapp.com/songs/${id}`,{
     method:"DELETE",
   })
   .then((resp)=>resp.json())
