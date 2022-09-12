@@ -148,6 +148,7 @@ button {
 }
 .delete-btn{
   background-color: var(--color-body);
+  margin-right: 5px;
 }
 .utilities{
   display: flex;
